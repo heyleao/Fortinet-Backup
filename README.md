@@ -1,5 +1,4 @@
 # Fortinet-Backup
-<<<<<<< HEAD
 =======
 Instale o Python e em seguida as dependencias:
 
@@ -19,5 +18,3 @@ Para utilizar o programa basta inserir seu usuário, senha, IP, Porta e a Pasta 
 ![Tela do Programa](https://github.com/heyleao/Fortinet-Backup/blob/main/Tela%20do%20programa.png
 )
 
-
->>>>>>> ae841d8dc00f40a0d5a5de9a69453e1b800ce620
