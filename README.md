@@ -12,3 +12,4 @@ Em seguida utilizar o comando:
 
 "pyinstaller --onefile seu_script.py"
 
+Para utilizar o programa basta inserir seu usuário, senha, IP, Porta e a Pasta que deseja salvar os arquivos.
