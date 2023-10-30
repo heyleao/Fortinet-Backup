@@ -1,7 +1,7 @@
 # Fortinet-Backup
 =======
 Instale o Python e em seguida as dependencias:
-
+"pip install os"
 "pip install paramiko"
 "pip install tkinter"
 
