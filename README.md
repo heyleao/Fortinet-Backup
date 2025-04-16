@@ -29,7 +29,7 @@ Ferramenta gráfica (GUI) feita em Python para executar múltiplos comandos SSH 
 
 Se você não tem Python instalado, basta baixar e rodar o executável:
 
-👉 **[Download do Executável (.exe)](https://github.com/seuusuario/seurepositorio/releases)**
+👉 **[Download do Executável (.exe)]([https://github.com/seuusuario/seurepositorio/releases])**
 
 Sem necessidade de instalação de dependências!
 
