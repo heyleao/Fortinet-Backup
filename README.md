@@ -44,12 +44,14 @@ Sem necessidade de instalação de dependências!
 
 ```bash
 pip install paramiko
+```
 
 🔐 Funcionalidades
 Conecta via SSH utilizando paramiko
 
 Executa os comandos abaixo no equipamento remoto:
 
+```bash
 show antivirus profile
 show full-configuration
 sh webfilter profile
@@ -65,6 +67,7 @@ sh sys ha
 sh user ldap
 sh user fsso
 sh application list
+```
 
 Salva a saída de cada comando em arquivos separados no diretório selecionado
 
@@ -84,7 +87,7 @@ As credenciais são digitadas na interface e não são armazenadas. Use com resp
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 📬 Contato
-Criado por Seu Nome - Entre em contato para dúvidas, melhorias ou sugestões.
+Criado por hey_leao - Entre em contato para dúvidas, melhorias ou sugestões.
 
 ![Tela do Programa](https://github.com/heyleao/Fortinet-Backup/blob/main/Tela%20do%20programa.png
 )
