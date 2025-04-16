@@ -1,136 +1,128 @@
-SSH Commands Executor com Interface Gráfica
-Este programa foi desenvolvido para executar uma série de comandos SSH em um host remoto e salvar as saídas de cada comando em arquivos de texto dentro de um diretório selecionado pelo usuário. A aplicação utiliza a biblioteca paramiko para estabelecer conexões SSH e tkinter para criar uma interface gráfica que facilita a entrada de dados e o acompanhamento do progresso da execução dos comandos.
+SSH Commands Executor
+Interface Gráfica para Execução Automatizada de Comandos SSH
+
+Índice
+Visão Geral
 
 Funcionalidades
-Conexão SSH: Utiliza o módulo paramiko para estabelecer uma conexão SSH com um host remoto, adotando uma política de aceitação automática de chaves de host.
 
-Execução de Comandos: Executa uma série de comandos pré-definidos no host remoto e captura as saídas.
+Requisitos
 
-Interface Gráfica: Emprega o tkinter para criar uma interface interativa onde o usuário informa as credenciais de conexão (usuário, senha, host, porta) e escolhe o diretório onde os resultados serão salvos.
+Configuração e Uso
 
-Barra de Progresso e Feedback: Atualiza uma barra de progresso e fornece mensagens de status para informar o andamento da execução dos comandos.
+Detalhamento do Código
 
-Salvamento de Resultados: Cria arquivos de texto para cada comando executado, nomeando-os a partir do comando utilizado (com espaços substituídos por sublinhados).
+Considerações de Segurança
+
+Contribuições
+
+Visão Geral
+O SSH Commands Executor é uma ferramenta que automatiza a execução de comandos via SSH em hosts remotos. A aplicação utiliza a biblioteca paramiko para gerenciamento de conexões SSH e tkinter para disponibilizar uma interface gráfica interativa, permitindo que o usuário configure os parâmetros de conexão e acompanhe o progresso da execução dos comandos.
+
+Funcionalidades
+Conexão SSH:
+Estabelece uma conexão segura com o host remoto utilizando as credenciais fornecidas pelo usuário.
+
+Execução Automatizada de Comandos:
+Executa uma sequência de comandos pré-definidos e armazena a saída de cada comando em arquivos de texto individuais.
+
+Interface Gráfica Amigável:
+Permite a entrada de dados como usuário, senha, host, porta e diretório, além de proporcionar uma barra de progresso e mensagens de status para monitoramento.
+
+Feedback Visual:
+Atualiza dinamicamente uma barra de progresso e exibe mensagens de status para garantir que o usuário esteja ciente do andamento do processo.
 
 Requisitos
 Python 3.x
 
-Bibliotecas:
+Bibliotecas Necessárias:
 
-paramiko: Para conexões SSH.
-Instalação: pip install paramiko
-
-tkinter: Geralmente vem pré-instalado com o Python. Caso não esteja disponível, em distribuições Linux pode ser necessário instalar o pacote python3-tk.
-
-Sistema Operacional: Qualquer sistema que suporte Python e os módulos acima.
-
-Como Usar
-Instalação e Dependências:
-Certifique-se de que o Python e as bibliotecas necessárias estejam instalados. Se necessário, instale o paramiko executando:
+paramiko:
+Instalado via:
 
 bash
 Copiar
 pip install paramiko
-Executando o Programa:
-Execute o script através do terminal:
+tkinter:
+Geralmente incluso nas distribuições padrão do Python. Em sistemas Linux, pode ser necessário instalar o pacote python3-tk.
+
+Sistema Operacional:
+Compatível com qualquer sistema que suporte Python e as bibliotecas mencionadas.
+
+Configuração e Uso
+Instalação
+Clone ou Baixe o Repositório:
+Certifique-se de que todos os arquivos do projeto estejam no seu ambiente de trabalho.
+
+Instale as Dependências:
+Execute:
+
+bash
+Copiar
+pip install paramiko
+Verifique se o tkinter está instalado.
+
+Execução do Programa
+Salve o Script:
+Guarde o código em um arquivo com extensão .py.
+
+Execute o Script no Terminal:
 
 bash
 Copiar
 python nome_do_arquivo.py
-Substitua nome_do_arquivo.py pelo nome do arquivo onde o código foi salvo.
+Substitua nome_do_arquivo.py pelo nome real do seu arquivo.
 
-Usando a Interface Gráfica:
+Utilizando a Interface Gráfica
+Inserção dos Dados de Conexão:
 
-Preenchimento dos Campos:
-Insira as informações solicitadas:
+Usuário: Seu nome de usuário para SSH.
 
-Usuário: Nome de usuário para acesso SSH.
-
-Senha: Senha associada ao usuário (campo mascarado).
+Senha: Senha de acesso (campo mascarado).
 
 Host: Endereço IP ou hostname do servidor remoto.
 
-Porta: Porta para conexão SSH (normalmente 22).
+Porta: Porta de conexão (normalmente, 22).
 
-Diretório: Local onde os arquivos de saída serão salvos. O diretório atual (".") é o padrão.
+Diretório: Caminho onde os arquivos de saída serão salvos (padrão: diretório atual).
 
-Selecionar Diretório:
-Clique no botão "Escolher diretório" para abrir um diálogo e selecionar um diretório desejado.
+Seleção do Diretório:
+Clique no botão “Escolher diretório” para abrir um diálogo e selecionar o local desejado.
 
-Executar os Comandos:
-Após preencher os campos, clique no botão "Executar".
-O programa estabelecerá a conexão SSH, executará os comandos listados e atualizará a barra de progresso conforme cada comando é processado.
+Início da Execução:
+Após preencher os campos, clique no botão “Executar” para que a conexão seja estabelecida, os comandos sejam executados e os resultados sejam salvos automaticamente.
 
-Comandos SSH Executados
-O programa executa os seguintes comandos no host remoto:
-
-show antivirus profile
-
-show full-configuration
-
-sh webfilter profile
-
-sh vpn ipsec phase1-interface
-
-sh vpn ipsec phase2-interface
-
-sh firewall vip
-
-sh router static
-
-sh router bgp
-
-sh firewall policy
-
-sh ips sensor
-
-sh sys interface
-
-sh sys ha
-
-sh user ldap
-
-sh user fsso
-
-sh application list
-
-Cada comando terá sua saída salva em um arquivo de texto, nomeado conforme o comando (com espaços substituídos por sublinhados).
-
-Estrutura de Código
+Detalhamento do Código
 Importações e Inicializações:
-São importados módulos essenciais (os, paramiko, tkinter, dentre outros). Variáveis globais, como status_label, são definidas para atualizar a interface.
+O script importa as bibliotecas os, paramiko e módulos do tkinter para construir a interface. Variáveis globais, como status_label, auxiliam na atualização visual durante a execução.
 
 Função run_ssh_commands(directory="."):
 Responsável por:
 
-Obter os dados de conexão a partir dos campos de entrada.
+Capturar os dados de conexão inseridos pelo usuário.
 
-Atualizar a interface com mensagens de status e a barra de progresso.
+Conectar via SSH ao host remoto.
 
-Estabelecer a conexão SSH e executar os comandos.
+Executar uma lista pré-definida de comandos e salvar cada resposta em um arquivo de texto no diretório selecionado.
 
-Salvar cada saída de comando em um arquivo dentro do diretório escolhido.
-
-Fechar a conexão e atualizar os feedbacks na interface.
+Atualizar a barra de progresso e mensagens de status durante a execução.
 
 Função choose_directory():
-Abre um diálogo para seleção do diretório e atualiza o campo de entrada com o diretório escolhido.
+Abre um diálogo para seleção de um diretório e atualiza o campo correspondente na interface.
 
-Configuração da Interface Gráfica:
-A interface é organizada utilizando o método grid do tkinter, onde são posicionados os Labels, Entrys e Botões. Também inclui uma barra de progresso que é dinamicamente atualizada conforme os comandos são executados.
+Interface Gráfica:
+A interface utiliza o método grid do tkinter para organizar os elementos visuais (Labels, Entrys e Botões), facilitando a interação do usuário e proporcionando um ambiente responsivo.
 
-Considerações
-Validação do Diretório:
-Caso o diretório especificado não exista, o programa notifica o usuário e interrompe a execução.
+Considerações de Segurança
+Política de Chaves SSH:
+O script utiliza a política AutoAddPolicy, que aceita automaticamente chaves de hosts desconhecidos.
+Para ambientes de produção, recomenda-se uma abordagem de verificação de chaves mais robusta.
 
-Segurança:
-Embora o script utilize uma política que aceita automaticamente chaves de host desconhecidas (AutoAddPolicy), considere os riscos de segurança associados e ajuste conforme necessário para ambientes de produção.
-
-Feedback Visual:
-A aplicação fornece feedback visual, atualizando a barra de progresso e mensagens para que o usuário tenha clareza sobre o andamento da execução dos comandos.
+Proteção de Credenciais:
+As senhas são inseridas em campos mascarados, aumentando a segurança na utilização da ferramenta.
 
 Contribuições
-Contribuições e sugestões de melhoria são bem-vindas. Caso identifique algum problema ou tenha ideias para novas funcionalidades, sinta-se à vontade para contribuir para o aprimoramento do projeto.
+Contribuições, sugestões de melhoria e correções são muito bem-vindas. Se você identificou algum problema ou possui ideias para novas funcionalidades, sinta-se à vontade para abrir issues e enviar pull requests no repositório do projeto.
 
 
 ![Tela do Programa](https://github.com/heyleao/Fortinet-Backup/blob/main/Tela%20do%20programa.png
