@@ -18,7 +18,8 @@ Ferramenta gráfica (GUI) feita em Python para executar múltiplos comandos SSH 
 
 ## 🖼️ Interface
 
-<img src="https://via.placeholder.com/600x300?text=SSH+Commands+Tool+UI" alt="Interface gráfica" />
+![Tela do Programa](https://github.com/heyleao/Fortinet-Backup/blob/main/Tela%20do%20programa.png
+)
 
 ---
 
@@ -89,6 +90,4 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 📬 Contato
 Criado por hey_leao - Entre em contato para dúvidas, melhorias ou sugestões.
 
-![Tela do Programa](https://github.com/heyleao/Fortinet-Backup/blob/main/Tela%20do%20programa.png
-)
 
